@@ -59,7 +59,7 @@
         </div>
     </header>
     
-    <section class="hero min-h-screen flex items-center justify-center relative overflow-hidden" id="home">
+    <section class="hero min-h-screen flex items-center justify-center relative overflow-hidden bg-center bg-cover" id="home" style="background-image:('5651980.jpg');">
         <!-- Professional Background with Geometric Elements -->
         <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
         <div class="absolute inset-0 bg-gradient-to-tr from-orange-500/10 via-transparent to-orange-600/10"></div>
@@ -145,7 +145,7 @@
         </div>
     </section>
 
-    <section class="about py-24 bg-gradient-to-br from-slate-50 to-white" id="about">
+    <section class="about py-24 bg-gradient-to-br from-slate-50 to-white scroll-mt-28 md:scroll-mt-32" id="about">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <!-- Professional Section Header -->
             <div class="text-center mb-20">
@@ -327,16 +327,22 @@
         </div>
         </div>
     </section>
-    <section class="services py-20 bg-white" id="services">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 max-w-5xl mx-auto">
-                <h1 class="text-4xl md:text-6xl font-black text-gray-800 mb-4">My Services</h1>
-                <div class="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">I offer a range of IT services to help businesses and organizations leverage technology effectively.</p>
+    <section class="services relative mt-16 md:mt-24 py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 scroll-mt-40 md:scroll-mt-48" id="services">
+        <!-- Subtle pattern background -->
+        <div class="pointer-events-none absolute inset-0 opacity-10" style="background-image:url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.15\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 md:pt-16">
+            <div class="text-center mb-16 max-w-5xl mx-auto lg:hidden">
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-8 inline-block relative after:content-[''] after:absolute after:left-0 after:-bottom-2 after:h-1 after:w-full after:bg-orange-500">My Services</h1>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">I offer a range of IT services to help businesses and organizations leverage technology effectively.</p>
             </div>
             
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
-                <div class="services-img flex justify-center order-2 lg:order-1">
+                <div class="services-img flex flex-col justify-start order-2 lg:order-1">
+                    <!-- Desktop heading placed above the image on the left column -->
+                    <div class="hidden lg:block text-left mb-8">
+                        <h2 class="text-5xl font-extrabold text-white leading-tight inline-block relative after:content-[''] after:absolute after:left-0 after:-bottom-2 after:h-1 after:w-full after:bg-orange-500 mb-3">My Services</h2>
+                        <p class="mt-6 text-gray-300 max-w-md">I offer a range of IT services to help businesses and organizations leverage technology effectively.</p>
+                    </div>
                     <div class="relative">
                         <div class="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl blur-lg opacity-20"></div>
                         <img src="Jom.png" alt="Jomar Nobleza Services" class="relative w-80 h-80 sm:w-96 sm:h-96 rounded-2xl object-cover shadow-2xl border-4 border-white transform hover:scale-105 transition-transform duration-300">
@@ -351,8 +357,8 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                                 </svg>
             </div>
-                            <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-1 sm:mb-2">Cybersecurity Services</h3>
-                            <p class="text-xs sm:text-sm text-gray-600 leading-snug">Conduct security assessments for local businesses, focusing on their IT infrastructure and providing recommendations to enhance their security.</p>
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">Cybersecurity Services</h3>
+                            <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Conduct security assessments for local businesses, focusing on their IT infrastructure and providing recommendations to enhance their security.</p>
                     </div>
                 </div>
                     
@@ -363,8 +369,8 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-1 sm:mb-2">IT Consulting</h3>
-                            <p class="text-xs sm:text-sm text-gray-600 leading-snug">Provide consulting services for small businesses on how to leverage technology to improve their operations, enhance security, or adopt new software solutions.</p>
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">IT Consulting</h3>
+                            <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Provide consulting services for small businesses on how to leverage technology to improve their operations, enhance security, or adopt new software solutions.</p>
                     </div>
                 </div>
                     
@@ -375,8 +381,8 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-1 sm:mb-2">Volunteering</h3>
-                            <p class="text-xs sm:text-sm text-gray-600 leading-snug">Offer your IT skills to non-profit organizations that may lack the resources to manage their technology needs effectively.</p>
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">Volunteering</h3>
+                            <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Offer your IT skills to non-profit organizations that may lack the resources to manage their technology needs effectively.</p>
                     </div>
                 </div>
                     
@@ -387,8 +393,8 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                                 </svg>
                             </div>
-                            <h3 class="text-base sm:text-lg font-bold text-gray-800 mb-1 sm:mb-2">Software Development</h3>
-                            <p class="text-xs sm:text-sm text-gray-600 leading-snug">Participate in freelance projects or internships where you can develop software applications (web apps, mobile apps) for real clients.</p>
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-3">Software Development</h3>
+                            <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Participate in freelance projects or internships where you can develop software applications (web apps, mobile apps) for real clients.</p>
                         </div>
                     </div>
                 </div>
