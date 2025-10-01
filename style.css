@@ -6,7 +6,66 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out;
 }
 :root {
     --bg-color: #313335;
@@ -20,10 +79,101 @@ html{
     overflow-x: hidden;
 }
 body{
-    background-color: var(--second-bg-color);
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
+    background-color: #ffffff;
+    line-height: 1.7;
+    color: #334155;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Smooth scrolling for all anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Professional Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #f97316, #ea580c);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #ea580c, #dc2626);
+}
+
+/* Professional Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    letter-spacing: -0.025em;
+}
+
+/* Professional Selection */
+::selection {
+    background-color: #fed7aa;
+    color: #9a3412;
+}
+
+/* Professional Focus States */
+*:focus-visible {
+    outline: 2px solid #f97316;
+    outline-offset: 2px;
+}
+
+/* Professional Link Styles */
+a {
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Professional Button Styles */
+button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Professional Card Hover Effects */
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Professional Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Professional Glass Effect */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Professional Shadow System */
+.shadow-professional {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-professional-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-professional-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 .header{
     position: fixed;
@@ -230,19 +380,7 @@ section{
     transform: scale(1.03); 
 }
 
-.service-info h1 {
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0.5rem;
-}
-
-.service-info p {
-    text-align: center;
-    margin: 1rem;
-    font-size: 1.8rem;
-    font-weight: 600;
-}
+/* Removed legacy .service-info typography to avoid overriding Tailwind sizes */
 
 
 .services-img img {
@@ -392,26 +530,7 @@ section{
     padding:8rem;       
     max-width:800px;        
 }
-.contact h1 {
-    text-align: center;
-    font-size: 5rem;
-    font-weight: 800;
-    margin: 1rem;
-}
-.contact p {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
-}
-.contact h3{
-    font-size: 4rem;
-    font-weight: 900;
-    text-align: center;
-    color: black;
-}
-.contact btn{
-    font-size: 2rem;
-}
+/* Legacy contact styles removed to allow Tailwind classes to control layout */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -472,11 +591,17 @@ form {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center
+    background-attachment: fixed;
+    position: relative;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
 }
